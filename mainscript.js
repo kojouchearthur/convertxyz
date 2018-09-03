@@ -130,8 +130,7 @@ function convsn(a){
 				sV.style.color = "black";
 				sV.style.fontSize = "14px";
 				swp.removeAttribute("disabled");
-				valNote[1].style.color = "white";
-				
+				valNote[1].style.color = "white";				
 				setDesc(a,fIndx,sel,sIndx,sel.options[sIndx].text,sel.options[sIndx].text.split("-")[0],sel.options[sIndx].text.split("-")[1]);				
 			}			
 		}	

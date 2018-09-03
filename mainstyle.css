@@ -1,0 +1,102 @@
+
+/*style elements*/
+
+hr{
+	margin-top: 0px;
+}
+
+mark{
+	background-color:coral;
+	color:#efefef;
+}
+
+/*style classes*/
+
+.op_con{
+	border-radius:15px;
+	margin-bottom:20px;
+}
+
+
+.opForm{
+	width: 90%;
+	margin:0 auto;
+	padding: 20px;
+}
+
+.opHd, .swp_con{	
+	text-align:center;	
+}
+
+.opSelect{
+	margin-top: 5px;
+	margin-bottom: -10px;
+	text-align: center;
+}
+
+.opTitle{
+	margin-bottom: ;
+}
+
+.vals{
+	
+}
+
+.valNote{
+	text-align:center;
+	font-weight:bold;
+	font-size:12px;
+	font-style:italic;
+}
+
+.swp_con{
+	margin: 15px 0;
+}
+
+/*style ids*/
+#crntm{
+	float: right;
+	font-weight:bold;
+}
+
+#crndt{
+	float: left;
+	font-weight:bold;
+}
+
+#chrono{
+	margin-top: -10px;
+}
+
+#chron{
+	margin-top: -20px;
+	position: sticky;
+	top:0;
+	z-index:10000;
+}
+
+#men_tit{
+	padding-top:13px;
+	color:white;
+	text-align:center;
+}
+
+#crncy_con{
+	background-color: #333; /*#acacac;*/
+	color:white;
+}
+
+#metrc_con{
+	background-color: teal;
+	color:white;
+}
+
+#nbase_con{
+	background-color: #577;
+	color: white;
+}
+
+#every{
+	background-color: ;
+	border: ;
+}

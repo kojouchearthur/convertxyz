@@ -29,7 +29,6 @@ function chrono(){
 	crntm.innerHTML = "<i class='fa fa-clock-o'></i> " + tm.toLocaleTimeString();
 }
 
-alert();
 
 for (var i = 0; i < opSelect.length; i++){
 	opSelect[i].addEventListener("change", function (){selOp(this.form, this);});

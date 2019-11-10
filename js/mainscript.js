@@ -13,13 +13,43 @@ var opSelectArr =  Array.from(opSelect);
 var opFormArr = Array.from(opForm);
 var swpArr = Array.from(swp);
 
-var crncyFctr = [365,430,495,57.53,5.51,79.45,27.52,4.26]; //for currencny conversion form arranged in option order, i.e, USD, EURO, GBP...respectively
+//[365,430,495,57.53,5.51,79.45,27.52,4.26]; for currencny conversion form arranged in option order, i.e, USD, EURO, GBP...respectively
+
 var metrcFctr = [0.621504,0.3048,0.9144,2.5401,2.2045855,0.157473,0.2,28.35,31.103477,0.0929,6.4516,2.4709661,3.78541,0.0083864,0.0610237,0.0283168]; //for metric conversion form arranged in option order, i.e, Kg-Mile, metre-Km,...respectively
 var nbaseFctr = [2,8,16]; //for number base conversion form
 
+var crncyFctr = function (){
+    var crncyRts;
+    // get the most recent exchange rates via the "latest" endpoint:
+    $.ajax({
+        async: false,
+        'url': 'http://www.floatrates.com/daily/ngn.json',   
+        'dataType': 'json'
+    }).done(function(ngnrx) {
+            // exchange rata data is stored in ngnrx[]
+            crncyRts = [
+                ngnrx.usd.rate,
+                ngnrx.eur.rate,
+                ngnrx.gbp.rate,
+                ngnrx.cny.rate,
+                ngnrx.inr.rate,
+                ngnrx.ghs.rate,
+                ngnrx.zar.rate,
+                ngnrx.kes.rate
+            ];
+            
+            crncyRts.forEach(updtCrncyRts);
+            function updtCrncyRts(item,index,arr){
+                arr[index] = ((1/item)*1.178).toFixed(3);
+            }
+             
+        });
+        
+    return crncyRts;
+}();
+
 var allFctr = [crncyFctr, metrcFctr, nbaseFctr];
 var swapState = false;
-
 
 setInterval(chrono, 1000);
 
@@ -129,7 +159,8 @@ function convsn(a){
 				sV.style.color = "black";
 				sV.style.fontSize = "14px";
 				swp.removeAttribute("disabled");
-				valNote[1].style.color = "white";				
+				valNote[1].style.color = "white";
+				
 				setDesc(a,fIndx,sel,sIndx,sel.options[sIndx].text,sel.options[sIndx].text.split("-")[0],sel.options[sIndx].text.split("-")[1]);				
 			}			
 		}	

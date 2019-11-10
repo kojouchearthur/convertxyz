@@ -10,7 +10,7 @@
   <meta http-equiv="refresh" content="3000"/>
   <meta name="description" content="Convert values beween metric units, currency (wrt Naira), number bases, all in one place"/>
   <meta name="keyword" content="metric conversion, number conversion, binary, octal, hexadecimal conversion, currency, barrel conversion, hectare, acre, volume conversion"/>
-  <title>. : : . Convert Numbers | Number Base | Currency | Metric Units | ConvertXYZ.com</title>
+  <title>. : : . Convert Numbers | Number Base | Currency | Metric Units | ConvertXYZ</title>
   
   <link rel="stylesheet" href="css/bootstrap.min.css"/>
   <link rel="stylesheet" href="css/font-awesome.min.css"/>
@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="css/mainstyle.css"/>
   <link rel="shortcut-icon" href=""/>
   
+  <script src="js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -36,7 +37,7 @@
 	  <ul class="nav navbar-nav" style="text-align:center;">
 	    <li><a href="#">&nbsp;</a></li>	
 		
-		<li><h3 id="men_tit"><i class="fa fa-money"></i> Currencies | <i class="fa fa-balance-scale"></i> Metric Units | <i class="fa fa-calculator"></i> Number Bases | </h3></li>		
+		<li><h5 id="men_tit"><i class="fa fa-money"></i> Currencies | <i class="fa fa-balance-scale"></i> Metric Units | <i class="fa fa-calculator"></i> Number Bases | </h5></li>		
 		
 	  </ul>
 	  <ul  class="nav navbar-nav navbar-right">
@@ -73,7 +74,7 @@
 				<option value="INR">INR - NGN</option>
 				<option value="GHC">GHC - NGN</option>
 				<option value="RND">ZAR - NGN</option>
-				<option value="KSH">KES - NGN</option>				
+				<option value="KSH">KSH - NGN</option>				
 			  </select>
 			</div>
 		    <h5 class="opTitle" id="crncy_title"></h5>
@@ -99,6 +100,7 @@
 			<div class="valNote sValNote" id="crncy_sValNote"></div>
 		  </div>
 		  <br>
+		<h6 style='text-align:center;font-size:10px;'>Currency exchange Rates are set using data from <a href='https://floatrates.com' target="_blank"><em>floatrates.com</em></a> API with slight modification</h6>
 		</form>
 	  </div>
 	  </div>
@@ -164,6 +166,7 @@
 			</div>
 			<div class="valNote sValNote" id="metrc_sValNote"></div>
 		  </div><br>
+		  <h6 style="text-align:center;font-size:12px;">Conversion between Metric Units</h6><br>
 		</form>		
 	  </div>
 	  </div>
@@ -203,7 +206,8 @@
 			  <input type="text" class="form-control sVal val" id="nbase_sVal" placeholder="" disabled />
 			</div>
 			<div class="valNote sValNote" id="nbase_sValNote"></div>
-		  </div><br>		
+		  </div><br>
+		  <h6 style="text-align:center;font-size:12px;">Conversion between Number Bases</h6><br>		
 		</form>
 	  </div>
 	  </div>
@@ -211,7 +215,7 @@
   </div>
 </div>
 <script src="js/mainscript.js"></script>
-<script src="js/jquery-3.3.1.min.js"></script>
+
 <!--<script src="js/semantic.min.js"></script>-->
 <script src="js/bootstrap.min.js"></script>
 <!-- <script src="js/mainscript.js"></script> -->

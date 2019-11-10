@@ -1,7 +1,11 @@
 # ConvertXYZ (multiconverter-multiform)
 convert values between different units from separate forms. This is a major update on my earlier multi-converter project. It is based purely on Javascript...
 
-#Update
+# Update 11-11-2019
+- Integrated API for updated exchange rates from floatrates.com
+- Minor changes to the index.php
+
+# Update
 The major updates from the earlier single form multi-converter project include:
 - Number base conversion (between binary, octal, decimal, and hexadecimal)
 - Three separate forms each for a group of units
